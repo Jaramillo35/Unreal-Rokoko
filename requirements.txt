@@ -1,0 +1,2 @@
+python-osc>=1.7.4
+numpy>=1.21.0
