@@ -1,0 +1,353 @@
+{
+  "meta": {
+    "version": "1.0",
+    "units": "degrees",
+    "rate_hz": 60,
+    "transport": "udp/osc",
+    "osc": {
+      "host": "127.0.0.1",
+      "port": 7000
+    },
+    "address_convention": "/bone/{bone}/{axis}",
+    "notes": [
+      "Send one float per OSC message (degrees).",
+      "Pitch = X (flex/extend), Roll = Z (lateral tilt), Yaw = Y (axial rotation).",
+      "Thorax signals distribute across spine_01..spine_05 using the provided weights."
+    ]
+  },
+  "channels": [
+    {
+      "source_column": "Pelvis_extension",
+      "osc_address": "/bone/pelvis/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Pelvis_lateral_flexion_rotation",
+      "osc_address": "/bone/pelvis/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Pelvis_axial_rotation",
+      "osc_address": "/bone/pelvis/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "osc_address": "/bone/spine_01/pitch",
+      "transform": {
+        "scale": 0.1,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "osc_address": "/bone/spine_02/pitch",
+      "transform": {
+        "scale": 0.2,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "osc_address": "/bone/spine_03/pitch",
+      "transform": {
+        "scale": 0.3,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "osc_address": "/bone/spine_04/pitch",
+      "transform": {
+        "scale": 0.25,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "osc_address": "/bone/spine_05/pitch",
+      "transform": {
+        "scale": 0.15,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "osc_address": "/bone/spine_01/roll",
+      "transform": {
+        "scale": 0.1,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "osc_address": "/bone/spine_02/roll",
+      "transform": {
+        "scale": 0.2,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "osc_address": "/bone/spine_03/roll",
+      "transform": {
+        "scale": 0.3,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "osc_address": "/bone/spine_04/roll",
+      "transform": {
+        "scale": 0.25,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "osc_address": "/bone/spine_05/roll",
+      "transform": {
+        "scale": 0.15,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "osc_address": "/bone/spine_01/yaw",
+      "transform": {
+        "scale": 0.1,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "osc_address": "/bone/spine_02/yaw",
+      "transform": {
+        "scale": 0.2,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "osc_address": "/bone/spine_03/yaw",
+      "transform": {
+        "scale": 0.3,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "osc_address": "/bone/spine_04/yaw",
+      "transform": {
+        "scale": 0.25,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "osc_address": "/bone/spine_05/yaw",
+      "transform": {
+        "scale": 0.15,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Neck_right_ward_rotation",
+      "osc_address": "/bone/neck_01/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Neck_right_ward_rotation",
+      "osc_address": "/bone/neck_01/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Neck_right_ward_rotation",
+      "osc_address": "/bone/neck_01/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightShoulder_flexion",
+      "osc_address": "/bone/upperarm_r/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftShoulder_flexion",
+      "osc_address": "/bone/upperarm_l/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightShoulder_abduction",
+      "osc_address": "/bone/upperarm_r/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftShoulder_abduction",
+      "osc_address": "/bone/upperarm_l/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightShoulder_external_rotation",
+      "osc_address": "/bone/upperarm_r/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftShoulder_external_rotation",
+      "osc_address": "/bone/upperarm_l/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightForeArm_position_x",
+      "osc_address": "/bone/lowerarm_r/pitch",
+      "transform": {
+        "scale": 0.5,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftForeArm_position_x",
+      "osc_address": "/bone/lowerarm_l/pitch",
+      "transform": {
+        "scale": 0.5,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightForeArm_position_y",
+      "osc_address": "/bone/lowerarm_r/roll",
+      "transform": {
+        "scale": 0.5,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftForeArm_position_y",
+      "osc_address": "/bone/lowerarm_l/roll",
+      "transform": {
+        "scale": 0.5,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightWrist_flexion",
+      "osc_address": "/bone/hand_r/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftWrist_flexion",
+      "osc_address": "/bone/hand_l/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightWrist_adduction",
+      "osc_address": "/bone/hand_r/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftWrist_adduction",
+      "osc_address": "/bone/hand_l/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightWrist_pronation",
+      "osc_address": "/bone/hand_r/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftWrist_pronation",
+      "osc_address": "/bone/hand_l/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    }
+  ]
+}

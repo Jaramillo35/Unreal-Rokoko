@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "fps": 60,
+    "default_duration": 1.5,
+    "notes": "Steering features aligned to actual dataset column names. Amplitudes are rough degrees for right/left turns. Removed non-existent ForeArm_roll features."
+  },
+  "channels": [
+    {
+      "address": "/mh/RightWrist_flexion",
+      "amp_right": 20.0,
+      "amp_left": -15.0
+    },
+    {
+      "address": "/mh/RightWrist_adduction",
+      "amp_right": 10.0,
+      "amp_left": -8.0
+    },
+    {
+      "address": "/mh/RightWrist_pronation",
+      "amp_right": 8.0,
+      "amp_left": -6.0
+    },
+    {
+      "address": "/mh/LeftWrist_flexion",
+      "amp_right": -15.0,
+      "amp_left": 20.0
+    },
+    {
+      "address": "/mh/LeftWrist_adduction",
+      "amp_right": -8.0,
+      "amp_left": 10.0
+    },
+    {
+      "address": "/mh/LeftWrist_pronation",
+      "amp_right": -6.0,
+      "amp_left": 8.0
+    },
+    {
+      "address": "/mh/RightShoulder_flexion",
+      "amp_right": 15.0,
+      "amp_left": -10.0
+    },
+    {
+      "address": "/mh/RightShoulder_abduction",
+      "amp_right": 12.0,
+      "amp_left": -8.0
+    },
+    {
+      "address": "/mh/RightShoulder_external_rotation",
+      "amp_right": 10.0,
+      "amp_left": -6.0
+    },
+    {
+      "address": "/mh/LeftShoulder_flexion",
+      "amp_right": -10.0,
+      "amp_left": 15.0
+    },
+    {
+      "address": "/mh/LeftShoulder_abduction",
+      "amp_right": -8.0,
+      "amp_left": 12.0
+    },
+    {
+      "address": "/mh/LeftShoulder_external_rotation",
+      "amp_right": -6.0,
+      "amp_left": 10.0
+    },
+    {
+      "address": "/mh/Thorax_axial_rotation",
+      "amp_right": 8.0,
+      "amp_left": -8.0
+    },
+    {
+      "address": "/mh/Thorax_lateral_flexion_rotation",
+      "amp_right": 5.0,
+      "amp_left": -5.0
+    },
+    {
+      "address": "/mh/RightForeArm_position_x",
+      "amp_right": 2.0,
+      "amp_left": -2.0
+    },
+    {
+      "address": "/mh/LeftForeArm_position_x",
+      "amp_right": -2.0,
+      "amp_left": 2.0
+    }
+  ]
+}

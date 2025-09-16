@@ -1,0 +1,622 @@
+{
+  "meta": {
+    "version": "1.0",
+    "units": "degrees",
+    "rate_hz": 60,
+    "transport": "udp/osc",
+    "osc": {
+      "host": "127.0.0.1",
+      "port": 7000
+    },
+    "address_convention": "/bone/{bone}/{axis}  value(deg)",
+    "notes": [
+      "Send one float per OSC message (degrees).",
+      "Pitch = X (flex/extend), Roll = Z (lateral tilt), Yaw = Y (axial rotation).",
+      "Thorax signals distribute across spine_01..spine_05 using the provided weights."
+    ]
+  },
+  "routes": [
+    {
+      "source_column": "Pelvis_extension",
+      "target": {
+        "type": "bone",
+        "bone": "pelvis",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/pelvis/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Pelvis_lateral_flexion_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "pelvis",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/pelvis/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Pelvis_axial_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "pelvis",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/pelvis/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "target": {
+        "type": "bone",
+        "bone": "spine_01",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/spine_01/pitch",
+      "transform": {
+        "scale": 0.1,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "target": {
+        "type": "bone",
+        "bone": "spine_02",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/spine_02/pitch",
+      "transform": {
+        "scale": 0.2,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "target": {
+        "type": "bone",
+        "bone": "spine_03",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/spine_03/pitch",
+      "transform": {
+        "scale": 0.3,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "target": {
+        "type": "bone",
+        "bone": "spine_04",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/spine_04/pitch",
+      "transform": {
+        "scale": 0.25,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_extension",
+      "target": {
+        "type": "bone",
+        "bone": "spine_05",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/spine_05/pitch",
+      "transform": {
+        "scale": 0.15,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_01",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/spine_01/roll",
+      "transform": {
+        "scale": 0.1,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_02",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/spine_02/roll",
+      "transform": {
+        "scale": 0.2,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_03",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/spine_03/roll",
+      "transform": {
+        "scale": 0.3,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_04",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/spine_04/roll",
+      "transform": {
+        "scale": 0.25,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_lateral_flexion_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_05",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/spine_05/roll",
+      "transform": {
+        "scale": 0.15,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_01",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/spine_01/yaw",
+      "transform": {
+        "scale": 0.1,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_02",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/spine_02/yaw",
+      "transform": {
+        "scale": 0.2,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_03",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/spine_03/yaw",
+      "transform": {
+        "scale": 0.3,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_04",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/spine_04/yaw",
+      "transform": {
+        "scale": 0.25,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Thorax_axial_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "spine_05",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/spine_05/yaw",
+      "transform": {
+        "scale": 0.15,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Neck_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "neck_01",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/neck_01/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Neck_left-ward_tilt",
+      "target": {
+        "type": "bone",
+        "bone": "neck_01",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/neck_01/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "Neck_right-ward_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "neck_01",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/neck_01/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftShoulder_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "upperarm_l",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/upperarm_l/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightShoulder_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "upperarm_r",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/upperarm_r/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftElbow_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "lowerarm_l",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/lowerarm_l/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftElbow_pronation",
+      "target": {
+        "type": "bone",
+        "bone": "lowerarm_l",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/lowerarm_l/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightElbow_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "lowerarm_r",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/lowerarm_r/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightElbow_pronation",
+      "target": {
+        "type": "bone",
+        "bone": "lowerarm_r",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/lowerarm_r/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftWrist_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "hand_l",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/hand_l/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftWrist_adduction",
+      "target": {
+        "type": "bone",
+        "bone": "hand_l",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/hand_l/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightWrist_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "hand_r",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/hand_r/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightWrist_adduction",
+      "target": {
+        "type": "bone",
+        "bone": "hand_r",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/hand_r/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftHip_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "thigh_l",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/thigh_l/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftHip_adduction",
+      "target": {
+        "type": "bone",
+        "bone": "thigh_l",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/thigh_l/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightHip_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "thigh_r",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/thigh_r/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightHip_adduction",
+      "target": {
+        "type": "bone",
+        "bone": "thigh_r",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/thigh_r/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftKnee_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "calf_l",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/calf_l/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightKnee_flexion",
+      "target": {
+        "type": "bone",
+        "bone": "calf_r",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/calf_r/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftAnkle_dorsiflexion",
+      "target": {
+        "type": "bone",
+        "bone": "foot_l",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/foot_l/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftAnkle_inversion",
+      "target": {
+        "type": "bone",
+        "bone": "foot_l",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/foot_l/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "LeftAnkle_internal_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "foot_l",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/foot_l/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightAnkle_dorsiflexion",
+      "target": {
+        "type": "bone",
+        "bone": "foot_r",
+        "axis": "pitch"
+      },
+      "osc_address": "/bone/foot_r/pitch",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightAnkle_inversion",
+      "target": {
+        "type": "bone",
+        "bone": "foot_r",
+        "axis": "roll"
+      },
+      "osc_address": "/bone/foot_r/roll",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    },
+    {
+      "source_column": "RightAnkle_internal_rotation",
+      "target": {
+        "type": "bone",
+        "bone": "foot_r",
+        "axis": "yaw"
+      },
+      "osc_address": "/bone/foot_r/yaw",
+      "transform": {
+        "scale": 1.0,
+        "offset": 0.0,
+        "clamp": null
+      }
+    }
+  ]
+}
