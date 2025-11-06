@@ -1,0 +1,9 @@
+unreal_bone,pitch_src,yaw_src,roll_src
+clavicle_l,Z,X,Y
+upperarm_l,X,Z,Y
+lowerarm_l,Z,X,Y
+hand_l,Z,X,Y
+clavicle_r,Z,X,Y
+upperarm_r,X,Z,Y
+lowerarm_r,Z,X,Y
+hand_r,Z,X,Y

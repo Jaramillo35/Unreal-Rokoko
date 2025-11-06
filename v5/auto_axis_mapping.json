@@ -1,0 +1,252 @@
+{
+  "/bone/upperarm_l": {
+    "x_deg": "yaw",
+    "y_deg": "roll",
+    "z_deg": "pitch"
+  },
+  "/bone/foot_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/lowerarm_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/hand_l": {
+    "x_deg": "yaw",
+    "y_deg": "pitch",
+    "z_deg": "roll"
+  },
+  "/bone/index_01_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/index_02_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/index_03_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/lhandindex4": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/middle_01_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/middle_02_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/middle_03_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/lhandmiddle4": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/pinky_01_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/pinky_02_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/pinky_03_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/ring_01_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/ring_02_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/ring_03_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/thumb_01_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/thumb_02_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/thumb_03_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/calf_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/ball_l": {
+    "x_deg": "yaw",
+    "y_deg": "pitch",
+    "z_deg": "roll"
+  },
+  "/bone/thigh_l": {
+    "x_deg": "yaw",
+    "y_deg": "pitch",
+    "z_deg": "roll"
+  },
+  "/bone/neck_01": {
+    "x_deg": "pitch",
+    "y_deg": "roll",
+    "z_deg": "yaw"
+  },
+  "/bone/upperarm_r": {
+    "x_deg": "roll",
+    "y_deg": "yaw",
+    "z_deg": "pitch"
+  },
+  "/bone/foot_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/lowerarm_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/hand_r": {
+    "x_deg": "yaw",
+    "y_deg": "pitch",
+    "z_deg": "roll"
+  },
+  "/bone/index_01_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/index_02_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/index_03_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/middle_01_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/middle_02_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/middle_03_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/pinky_01_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/pinky_02_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/pinky_03_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/ring_01_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/ring_02_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/ring_03_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/thumb_01_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/thumb_02_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/thumb_03_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/calf_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "/bone/ball_r": {
+    "x_deg": "yaw",
+    "y_deg": "pitch",
+    "z_deg": "roll"
+  },
+  "/bone/thigh_r": {
+    "x_deg": "yaw",
+    "y_deg": "pitch",
+    "z_deg": "roll"
+  },
+  "/bone/spine_01": {
+    "x_deg": "roll",
+    "y_deg": "pitch",
+    "z_deg": "yaw"
+  },
+  "/bone/spine_02": {
+    "x_deg": "roll",
+    "y_deg": "pitch",
+    "z_deg": "yaw"
+  },
+  "/bone/spine_03": {
+    "x_deg": "pitch",
+    "y_deg": "roll",
+    "z_deg": "yaw"
+  }
+}

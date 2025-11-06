@@ -1,0 +1,22 @@
+{
+  "upperarm_l": {
+    "x_deg": "yaw",
+    "y_deg": "pitch",
+    "z_deg": "roll"
+  },
+  "hand_l": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  },
+  "upperarm_r": {
+    "x_deg": "yaw",
+    "y_deg": "pitch",
+    "z_deg": "roll"
+  },
+  "hand_r": {
+    "x_deg": "pitch",
+    "y_deg": "yaw",
+    "z_deg": "roll"
+  }
+}
