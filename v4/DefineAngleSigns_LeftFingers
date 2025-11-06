@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+"""
+Interactive left-finger axis tester with cues.
+
+For each left finger (thumb, index, middle, ring, pinky):
+  • Moves joints 01–03 simultaneously in Pitch (flexion), holds, returns to zero.
+  • Prints a cue describing the expected motion.
+  • Waits for Enter before continuing.
+  • Repeats for Roll (axial twist) and Yaw (sideways/splay).
+
+OSC addresses (must match your BP switch):
+  /bone/thumb_01_l/pitch, /bone/index_02_l/roll, /bone/pinky_03_l/yaw, etc.
+"""
+
+import time
+from pythonosc.udp_client import SimpleUDPClient
+
+# ---- Settings ---------------------------------------------------------------
+IP = "127.0.0.1"
+PORT = 9000
+RATE = 30.0  # Hz
+
+# Test angles (deg) per axis
+ANGLES = {"pitch": 20.0, "roll": 20.0, "yaw": 12.0}
+
+HOLD_POS_SECS = 1.5
+HOLD_ZERO_SECS = 0.8
+INITIAL_DELAY = 1.0
+
+FINGERS = ["thumb", "index", "middle", "ring", "pinky"]
+JOINTS  = ["01", "02", "03"]
+AXES_ORDER = ["pitch", "roll", "yaw"]
+
+# ---- Motion cues per finger/axis -------------------------------------------
+CUES = {
+    "thumb": {
+        "pitch": "Flexion — thumb bends across the palm (toward wrist/palm).",
+        "roll":  "Axial twist — thumbnail rotates toward/away from palm.",
+        "yaw":   "Sideways sweep — thumb moves toward or away from index (adduction/abduction).",
+    },
+    "index": {
+        "pitch": "Flexion — finger curls into the palm.",
+        "roll":  "Axial twist — nail rotates toward/away from palm.",
+        "yaw":   "Sideways splay — finger moves toward or away from middle finger.",
+    },
+    "middle": {
+        "pitch": "Flexion — finger curls into the palm.",
+        "roll":  "Axial twist — nail rotates toward/away from palm.",
+        "yaw":   "Sideways splay — finger moves toward index or ring.",
+    },
+    "ring": {
+        "pitch": "Flexion — finger curls into the palm.",
+        "roll":  "Axial twist — nail rotates toward/away from palm.",
+        "yaw":   "Sideways splay — finger moves toward middle or pinky.",
+    },
+    "pinky": {
+        "pitch": "Flexion — finger curls into the palm.",
+        "roll":  "Axial twist — nail rotates toward/away from palm.",
+        "yaw":   "Sideways splay — finger moves toward or away from ring finger.",
+    },
+}
+
+# ---- Helpers ----------------------------------------------------------------
+def addr(finger: str, joint: str, axis: str) -> str:
+    return f"/bone/{finger}_{joint}_l/{axis}"
+
+def send_pose(client: SimpleUDPClient, pose: dict, secs: float):
+    dt = 1.0 / RATE
+    frames = max(1, int(secs * RATE))
+    for _ in range(frames):
+        for a, v in pose.items():
+            client.send_message(a, float(v))
+        time.sleep(dt)
+
+def zero_for_finger(finger: str) -> dict:
+    return {addr(finger, j, ax): 0.0 for j in JOINTS for ax in AXES_ORDER}
+
+# ---- Main -------------------------------------------------------------------
+def main():
+    client = SimpleUDPClient(IP, PORT)
+    print(f"[✓] Streaming to {IP}:{PORT} at {RATE:.1f} Hz")
+    time.sleep(INITIAL_DELAY)
+
+    for finger in FINGERS:
+        print(f"\n=== {finger.title()} ===")
+        send_pose(client, zero_for_finger(finger), 0.25)
+
+        for axis in AXES_ORDER:
+            # Build pose: drive all three joints of this finger on the same axis
+            pose = {addr(finger, j, axis): ANGLES[axis] for j in JOINTS}
+            cue = CUES.get(finger, {}).get(axis, "")
+            print(f"\n→ {finger.title()} {axis.upper()}  ({ANGLES[axis]:.0f}°)")
+            if cue:
+                print(f"   Cue: {cue}")
+            print("   Addresses:")
+            for a in sorted(pose.keys()):
+                print("    ", a)
+
+            # Apply motion
+            send_pose(client, pose, HOLD_POS_SECS)
+            # Return to zero
+            send_pose(client, zero_for_finger(finger), HOLD_ZERO_SECS)
+
+            input("   Looks right? Press Enter to continue…")
+
+    print("\nAll fingers tested. Done.")
+
+if __name__ == "__main__":
+    main()

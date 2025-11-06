@@ -1,0 +1,17 @@
+{
+  "Pelvis_Pitch": {
+    "expected": "FORWARD tip (anterior tilt) \u2014 sagittal plane",
+    "matches_positive": false,
+    "angle_tested_deg": 30.0
+  },
+  "Pelvis_Yaw": {
+    "expected": "TWIST / TURN around vertical \u2014 transverse plane",
+    "matches_positive": false,
+    "angle_tested_deg": 30.0
+  },
+  "Pelvis_Roll": {
+    "expected": "SIDE tilt (one hip drops) \u2014 coronal plane",
+    "matches_positive": true,
+    "angle_tested_deg": 30.0
+  }
+}

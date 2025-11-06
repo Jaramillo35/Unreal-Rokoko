@@ -1,0 +1,14 @@
+{
+  "Pitch": {
+    "expected": "FLEXION \u2014 thorax bends FORWARD (sagittal plane)",
+    "matches": true
+  },
+  "Roll": {
+    "expected": "LATERAL FLEXION \u2014 thorax tilts LEFT (coronal plane)",
+    "matches": false
+  },
+  "Yaw": {
+    "expected": "AXIAL ROTATION \u2014 thorax twists LEFT (transverse plane)",
+    "matches": false
+  }
+}

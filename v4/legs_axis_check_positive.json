@@ -1,0 +1,66 @@
+{
+  "LeftThighPitch": {
+    "expected": "HIP ABDUCTION \u2014 left thigh moves OUT to the SIDE",
+    "matches": false
+  },
+  "LeftThighYaw": {
+    "expected": "HIP FLEXION \u2014 left thigh moves FORWARD",
+    "matches": false
+  },
+  "LeftThighRoll": {
+    "expected": "EXTERNAL ROTATION \u2014 left knee points OUTWARD",
+    "matches": true
+  },
+  "LeftCalfPitch": {
+    "expected": "KNEE FLEXION \u2014 left lower leg bends BACKWARD (heel toward butt)",
+    "matches": true
+  },
+  "LeftFootPitch": {
+    "expected": "ANKLE FLEXION \u2014 toes move DOWN/forward (plantarflexion)",
+    "matches": true
+  },
+  "LeftFootYaw": {
+    "expected": "ANKLE INVERSION/EVERSION \u2014 sole tilts MEDIAL/LATERAL",
+    "matches": true
+  },
+  "LeftFootRoll": {
+    "expected": "ANKLE AXIAL ROTATION \u2014 foot yaws so toes point OUTWARD",
+    "matches": true
+  },
+  "LeftBallPitch": {
+    "expected": "TOE FLEXION \u2014 ball/toes press DOWN",
+    "matches": true
+  },
+  "RightThighPitch": {
+    "expected": "HIP ABDUCTION \u2014 right thigh moves OUT to the SIDE",
+    "matches": true
+  },
+  "RightThighYaw": {
+    "expected": "HIP FLEXION \u2014 right thigh moves FORWARD",
+    "matches": true
+  },
+  "RightThighRoll": {
+    "expected": "EXTERNAL ROTATION \u2014 right knee points OUTWARD",
+    "matches": true
+  },
+  "RightCalfPitch": {
+    "expected": "KNEE FLEXION \u2014 right lower leg bends BACKWARD (heel toward butt)",
+    "matches": false
+  },
+  "RightFootPitch": {
+    "expected": "ANKLE FLEXION \u2014 toes move DOWN/forward (plantarflexion)",
+    "matches": true
+  },
+  "RightFootYaw": {
+    "expected": "ANKLE INVERSION/EVERSION \u2014 sole tilts MEDIAL/LATERAL",
+    "matches": true
+  },
+  "RightFootRoll": {
+    "expected": "ANKLE AXIAL ROTATION \u2014 foot yaws so toes point OUTWARD",
+    "matches": true
+  },
+  "RightBallPitch": {
+    "expected": "TOE FLEXION \u2014 ball/toes press DOWN",
+    "matches": true
+  }
+}

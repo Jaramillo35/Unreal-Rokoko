@@ -1,0 +1,12 @@
+{
+  "invert": {
+    "L": {
+      "flexion": false,
+      "pronation": true
+    },
+    "R": {
+      "flexion": false,
+      "pronation": true
+    }
+  }
+}

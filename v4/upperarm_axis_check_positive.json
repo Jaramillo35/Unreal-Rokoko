@@ -1,0 +1,26 @@
+{
+  "LeftPitch": {
+    "expected": "ABDUCTION \u2014 left arm lifts OUT to the SIDE",
+    "matches": false
+  },
+  "LeftYaw": {
+    "expected": "FLEXION \u2014 left arm lifts FORWARD in front of torso",
+    "matches": false
+  },
+  "LeftRoll": {
+    "expected": "EXTERNAL ROTATION \u2014 left upperarm twists so elbow pit/biceps turn OUTWARD",
+    "matches": true
+  },
+  "RightPitch": {
+    "expected": "ABDUCTION \u2014 right arm lifts OUT to the SIDE",
+    "matches": true
+  },
+  "RightYaw": {
+    "expected": "FLEXION \u2014 right arm lifts FORWARD in front of torso",
+    "matches": false
+  },
+  "RightRoll": {
+    "expected": "EXTERNAL ROTATION \u2014 right upperarm twists so elbow pit/biceps turn OUTWARD",
+    "matches": false
+  }
+}

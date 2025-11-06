@@ -1,0 +1,14 @@
+{
+  "Pitch": {
+    "expected": "FLEXION \u2014 chin moves DOWN toward chest (sagittal plane)",
+    "matches": true
+  },
+  "Roll": {
+    "expected": "LEFT TILT \u2014 left ear moves toward left shoulder (coronal plane)",
+    "matches": true
+  },
+  "Yaw": {
+    "expected": "LEFT ROTATION \u2014 head turns LEFT (transverse plane)",
+    "matches": true
+  }
+}
